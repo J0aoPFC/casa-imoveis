@@ -1,9 +1,3 @@
-/* ==========================================================================
-   INTERATIVIDADE DA ETAPA 1 — CASA IMÓVEIS
-   Por que: Garantir controle de tema e escala tipográfica pelo usuário
-   (WCAG 1.4.4) e tornar as abas de pesquisa dinâmicas e acessíveis.
-   ========================================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
   const htmlEl = document.documentElement;
   const themeToggleBtn = document.getElementById('btn-theme-toggle');
@@ -11,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const fontDecreaseBtn = document.getElementById('btn-font-decrease');
   const fontResetBtn = document.getElementById('btn-font-reset');
 
-  // 1. Alternância de Modo Claro / Escuro com persistência
   const savedTheme = localStorage.getItem('casaimoveis-theme') || 'light';
   applyTheme(savedTheme);
 
@@ -28,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(currentTheme === 'light' ? 'dark' : 'light');
   });
 
-  // 2. Redimensionamento dinâmico da fonte (WCAG 1.4.4)
   let currentFontSize = 16;
 
   function updateFontSize(newSize) {
@@ -40,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   fontDecreaseBtn.addEventListener('click', () => updateFontSize(currentFontSize - 1));
   fontResetBtn.addEventListener('click', () => updateFontSize(16));
 
-  // 3. Abas de Pesquisa (Comprar / Alugar / Lançamentos)
   const tabs = document.querySelectorAll('.search-tab');
   const searchForm = document.getElementById('panel-busca');
   const labelFaixa = document.getElementById('label-faixa');

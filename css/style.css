@@ -1,9 +1,3 @@
-/* ==========================================================================
-   ESTILOS BASE DA ETAPA 1 — CASA IMÓVEIS
-   Por que: Aplicar a hierarquia visual com cores vibrantes apenas nos pontos
-   focais (cabeçalho hero, abas ativas e botões CTA), preservando leitura limpa.
-   ========================================================================== */
-
 - {
 
   box-sizing: border-box;
@@ -30,7 +24,6 @@ body {
   margin: 0 auto;
 }
 
-/* Foco visível de alto contraste para navegação por teclado (WCAG 2.4.7) */
 :focus-visible {
   outline: 3px solid var(--color-highlight);
   outline-offset: 3px;
@@ -52,7 +45,6 @@ body {
   top: 16px;
 }
 
-/* Barra de Acessibilidade */
 .a11y-bar {
   background-color: var(--bg-surface-alt);
   border-bottom: 1px solid var(--border-color);
@@ -92,7 +84,6 @@ body {
   border-color: var(--color-primary);
 }
 
-/* Cabeçalho */
 .site-header {
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
@@ -150,7 +141,6 @@ body {
   font-weight: 700;
 }
 
-/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--color-primary) 0%, #3B0764 100%);
   color: var(--text-on-primary);
@@ -186,7 +176,6 @@ body {
   opacity: 0.95;
 }
 
-/* Abas e Formulário de Pesquisa */
 .search-widget {
   background-color: var(--bg-surface);
   color: var(--text-main);
@@ -273,7 +262,6 @@ body {
   color: var(--color-highlight);
 }
 
-/* Seção Reservada Etapa 2 e Rodapé Base */
 .placeholder-section {
   padding: 56px 0;
   text-align: center;
