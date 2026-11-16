@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Cliente | JoãoFialho Incorporações & Imóveis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <a href="#login-principal" class="skip-link">Pular para o formulário de acesso</a>
+
+  <div class="a11y-bar" role="region" aria-label="Ferramentas de Acessibilidade">
+    <div class="container a11y-bar__content">
+      <a href="index.html" class="a11y-bar__label" style="text-decoration: none;">← Voltar para o Portal JoãoFialho</a>
+      <div class="a11y-bar__controls">
+        <button type="button" id="btn-font-decrease" class="btn-a11y" aria-label="Diminuir fonte">A-</button>
+        <button type="button" id="btn-font-reset" class="btn-a11y" aria-label="Fonte padrão">A</button>
+        <button type="button" id="btn-font-increase" class="btn-a11y" aria-label="Aumentar fonte">A+</button>
+        <button type="button" id="btn-theme-toggle" class="btn-a11y" aria-pressed="false">🌙 Modo Escuro</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="login-principal" class="login-wrapper">
+    <section class="login-card" aria-labelledby="login-titulo">
+      <a href="index.html" class="brand" style="margin-bottom: 20px;">
+        <svg class="brand__monogram" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <rect x="2" y="2" width="60" height="60" rx="8" fill="#0F172A" stroke="#C5A059" stroke-width="2.5"/>
+          <path d="M31 14V44C31 48.5 27.5 51 23 51C19.5 51 17 48.8 17 45.5" stroke="#C5A059" stroke-width="3.2" stroke-linecap="square"/>
+          <path d="M31 15.5H47" stroke="#C5A059" stroke-width="3.2" stroke-linecap="square"/>
+          <path d="M31 30H43" stroke="#C5A059" stroke-width="3.2" stroke-linecap="square"/>
+        </svg>
+        <div>
+          <div class="brand__wordmark"><span>João</span><strong>Fialho</strong></div>
+          <span class="brand__sub">Portal Exclusivo</span>
+        </div>
+      </a>
+
+      <h1 id="login-titulo">Área do Cliente</h1>
+      <p class="login-card__sub">Acompanhe o cronograma da sua obra, extratos financeiros, contratos de locação ou dossiês de investimento.</p>
+
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <label for="login-perfil">Perfil de Acesso</label>
+          <select id="login-perfil">
+            <option value="Cliente / Investidor">Cliente / Investidor</option>
+            <option value="Locatário / Proprietário">Locatário / Proprietário</option>
+            <option value="Corretor Associado (CRECI)">Corretor Associado (CRECI)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="login-email">E-mail ou CPF</label>
+          <input type="text" id="login-email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="login-senha">Senha</label>
+          <div class="password-row">
+            <input type="password" id="login-senha" placeholder="Digite sua senha" required>
+            <button type="button" id="btn-toggle-pass" class="btn-a11y" aria-label="Mostrar ou ocultar senha">Mostrar</button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-cta">Acessar Portal</button>
+        <p id="login-feedback" class="search-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

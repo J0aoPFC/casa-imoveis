@@ -1,38 +1,62 @@
 /* ==========================================================================
-   TOKENS DE DESIGN E VARIÁVEIS DE COR — CASA IMÓVEIS
-   Por que: Centralizar a paleta vibrante com contraste WCAG 2.1 (AA/AAA)
-   e permitir a alternância dinâmica entre Modo Claro e Modo Escuro.
+   TOKENS DE DESIGN — JOÃOFIAHLO (ROTA B: LUXO E EXCLUSIVIDADE)
+   Por que: Transmitir solidez patrimonial, discrição e alto padrão através
+   de Azul-Petróleo, Verde-Esmeralda, Dourado Champagne e Areia Travertino,
+   preservando contraste WCAG 2.1 (AA/AAA) nos modos claro e escuro.
    ========================================================================== */
 
 :root {
-  --color-primary: #5B21B6;
-  --color-primary-hover: #4C1D95;
-  --color-accent: #FF5500;
-  --color-accent-hover: #E04B00;
-  --color-highlight: #FACC15;
+  --color-primary: #0F172A;
+  --color-primary-deep: #070B14;
+  --color-primary-hover: #1E293B;
+  --color-secondary: #064E3B;
+  --color-accent: #C5A059;
+  --color-accent-hover: #B08B43;
+  --color-accent-text: #856424;
 
-  --bg-page: #F8FAFC;
+  --bg-page: #F5F2EB;
   --bg-surface: #FFFFFF;
-  --bg-surface-alt: #EEF2FF;
-  --text-main: #0B0F19;
-  --text-muted: #334155;
-  --text-on-primary: #FFFFFF;
-  --text-on-accent: #0B0F19;
-  --border-color: #CBD5E1;
+  --bg-surface-alt: #EBE6DC;
+  --text-main: #18181B;
+  --text-muted: #4B5563;
+  --text-on-primary: #F5F2EB;
+  --text-on-accent: #0F172A;
+  --border-color: #D6CFC2;
 
-  --font-family-base: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --badge-planta-bg: #FEF3C7;
+  --badge-planta-text: #78350F;
+  --badge-obras-bg: #E2E8F0;
+  --badge-obras-text: #0F172A;
+  --badge-pronto-bg: #DCFCE7;
+  --badge-pronto-text: #064E3B;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-family-base: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-size-root: 16px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --shadow-card: 0 10px 25px rgba(11, 15, 25, 0.08);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 2px 10px rgba(15, 23, 42, 0.06);
+  --shadow-card: 0 14px 32px rgba(15, 23, 42, 0.12);
 }
 
 [data-theme="dark"] {
-  --bg-page: #0B0F19;
-  --bg-surface: #131B2E;
-  --bg-surface-alt: #1E293B;
-  --text-main: #F8FAFC;
+  --color-accent-text: #E2C275;
+
+  --bg-page: #090D16;
+  --bg-surface: #111827;
+  --bg-surface-alt: #182235;
+  --text-main: #F5F2EB;
   --text-muted: #CBD5E1;
-  --border-color: #334155;
-  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.45);
+  --border-color: #2A364F;
+
+  --badge-planta-bg: #78350F;
+  --badge-planta-text: #FEF3C7;
+  --badge-obras-bg: #1E293B;
+  --badge-obras-text: #E2C275;
+  --badge-pronto-bg: #064E3B;
+  --badge-pronto-text: #D1FAE5;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.40);
+  --shadow-card: 0 14px 32px rgba(0, 0, 0, 0.60);
 }
