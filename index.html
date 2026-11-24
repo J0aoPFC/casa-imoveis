@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JoãoFialho | Incorporações & Imóveis de Alto Padrão (Etapa 1)</title>
+  <title>JoãoFialho | Incorporações & Imóveis de Alto Padrão em Brasília</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- Barra Superior Institucional e Acessibilidade (WCAG 2.1) -->
+  <!-- Barra de Acessibilidade (WCAG 2.1) -->
   <div class="a11y-bar" role="region" aria-label="Ferramentas de Acessibilidade">
     <div class="container a11y-bar__content">
       <span class="a11y-bar__label">CRECI-DF 28.490-J | Atendimento Private Brasília: (61) 3321-9000</span>
@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <!-- Cabeçalho com Monograma Arquitetônico JF -->
+  <!-- Cabeçalho Institucional com Monograma JF -->
   <header class="site-header">
     <div class="container site-header__content">
       <a href="index.html" class="brand" aria-label="JoãoFialho Incorporações e Imóveis - Página Inicial">
@@ -46,21 +46,23 @@
 
       <nav class="main-nav" aria-label="Navegação Principal">
         <ul class="main-nav__list">
-          <li><a href="#busca" class="main-nav__link">Explorar Acervo</a></li>
-          <li><a href="#etapa-2" class="main-nav__link">Empreendimentos (Etapa 2)</a></li>
-          <li><a href="#etapa-2" class="main-nav__link">Destaques DF (Etapa 2)</a></li>
-          <li><a href="#etapa-2" class="main-nav__link">Private Desk (Etapa 2)</a></li>
+          <li><a href="#busca" class="main-nav__link">Acervo</a></li>
+          <li><a href="#lancamentos" class="main-nav__link">Empreendimentos</a></li>
+          <li><a href="#vitrine" class="main-nav__link">Destaques DF</a></li>
+          <li><a href="#diferenciais" class="main-nav__link">Solidez</a></li>
+          <li><a href="#contato" class="main-nav__link">Private Desk</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="#etapa-2" class="btn-login" title="Implementação completa na Etapa 2">Portal do Cliente (Etapa 2)</a>
+        <a href="#contato" class="btn-outline">Avaliar Imóvel</a>
+        <a href="login.html" class="btn-login">Portal do Cliente</a>
       </div>
     </div>
   </header>
 
   <main id="conteudo-principal">
-    <!-- Hero Editorial + Widget de Pesquisa WAI-ARIA -->
+    <!-- Hero Banner + Abas de Pesquisa WAI-ARIA -->
     <section id="busca" class="hero" aria-labelledby="hero-titulo">
       <div class="container">
         <span class="hero__eyebrow">Arquitetura, Patrimônio & Exclusividade no DF</span>
@@ -71,9 +73,27 @@
           Curadoria de imóveis de alto padrão, coberturas lineares e lançamentos na planta nos eixos mais valorizados do Plano Piloto, Setor Noroeste, Sudoeste e Lago Sul.
         </p>
 
+        <div class="hero__stats" aria-label="Indicadores da JoãoFialho">
+          <div class="hero__stat">
+            <strong>+1.450</strong>
+            <span>Imóveis selecionados no DF</span>
+          </div>
+          <div class="hero__stat">
+            <strong>18</strong>
+            <span>Empreendimentos exclusivos</span>
+          </div>
+          <div class="hero__stat">
+            <strong>100%</strong>
+            <span>Assessoria jurídica e patrimonial</span>
+          </div>
+        </div>
+
         <div class="search-widget">
           <div class="search-tabs" role="tablist" aria-label="Modalidade do Imóvel">
-            <button type="button" role="tab" id="tab-comprar" aria-selected="true" aria-controls="panel-busca" data-mode="comprar" class="search-tab is-active">
+            <button type="button" role="tab" id="tab-todos" aria-selected="true" aria-controls="panel-busca" data-mode="todos" class="search-tab is-active">
+              Todos
+            </button>
+            <button type="button" role="tab" id="tab-comprar" aria-selected="false" aria-controls="panel-busca" data-mode="comprar" class="search-tab">
               Comprar
             </button>
             <button type="button" role="tab" id="tab-alugar" aria-selected="false" aria-controls="panel-busca" data-mode="alugar" class="search-tab">
@@ -84,10 +104,10 @@
             </button>
           </div>
 
-          <form id="panel-busca" class="search-form" role="tabpanel" aria-labelledby="tab-comprar">
+          <form id="panel-busca" class="search-form" role="tabpanel" aria-labelledby="tab-todos">
             <div class="form-group">
               <label for="input-localizacao">Superquadra, Setor ou Bairro</label>
-              <input type="text" id="input-localizacao" placeholder="Ex.: Noroeste, Asa Norte, Sudoeste, Lago Sul..." required>
+              <input type="text" id="input-localizacao" placeholder="Ex.: Noroeste, Asa Norte, Sudoeste, Jardim Botânico...">
             </div>
 
             <div class="form-group">
@@ -102,11 +122,12 @@
             </div>
 
             <div class="form-group">
-              <label for="select-faixa" id="label-faixa">Faixa de Aquisição</label>
+              <label for="select-faixa" id="label-faixa">Faixa de Investimento</label>
               <select id="select-faixa">
-                <option value="ate-1200k">Até R$ 1.200.000</option>
-                <option value="1200k-2500k">R$ 1.200.000 a R$ 2.500.000</option>
-                <option value="acima-2500k">Acima de R$ 2.500.000</option>
+                <option value="todas">Qualquer valor</option>
+                <option value="faixa-1">Até R$ 1.500.000 / R$ 3.000 mês</option>
+                <option value="faixa-2">R$ 1.500.000 a R$ 2.500.000</option>
+                <option value="faixa-3">Acima de R$ 2.500.000</option>
               </select>
             </div>
 
@@ -118,53 +139,425 @@
       </div>
     </section>
 
-    <!-- Área Reservada para a Etapa 2 -->
-    <section id="etapa-2" class="section section--alt" aria-labelledby="titulo-etapa2">
+    <!-- Carrossel de Lançamentos e Empreendimentos -->
+    <section id="lancamentos" class="section section--alt" aria-labelledby="titulo-lancamentos">
       <div class="container">
         <div class="section-header">
           <div>
-            <span class="section-header__tag">Roadmap de Desenvolvimento</span>
-            <h2 id="titulo-etapa2" class="section-header__title">Área Reservada — Etapa 2 do Projeto</h2>
+            <span class="section-header__tag">Incorporação Própria</span>
+            <h2 id="titulo-lancamentos" class="section-header__title">Empreendimentos Assinados JoãoFialho</h2>
           </div>
-          <p class="section-header__desc">
-            A Etapa 1 consolida a identidade visual (<strong>JoãoFialho</strong>), a paleta acessível (WCAG 2.1 AA/AAA), a tipografia editorial, os controles de acessibilidade e o widget de busca WAI-ARIA. Na <strong>Etapa 2</strong> serão incorporados:
-          </p>
+          <p class="section-header__desc">Projetos autorais com certificação de sustentabilidade, fachadas revestidas em materiais nobres e condições diretas com a incorporadora.</p>
+        </div>
+
+        <div class="carousel" id="empreendimentos-carousel" aria-roledescription="carrossel" aria-label="Empreendimentos em Destaque">
+          <!-- Slide 1 -->
+          <article class="carousel__slide is-active" data-slide="0">
+            <div class="carousel__visual carousel__visual--1">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 280' fill='none'><rect width='420' height='280' fill='%23070B14'/><rect x='50' y='35' width='140' height='215' rx='4' stroke='%23C5A059' stroke-width='2.5' fill='%230F172A'/><rect x='215' y='70' width='155' height='180' rx='4' stroke='%23C5A059' stroke-width='2.5' fill='%231E293B'/><rect x='75' y='62' width='34' height='32' fill='%23C5A059' fill-opacity='0.85'/><rect x='130' y='62' width='34' height='32' fill='%23C5A059' fill-opacity='0.45'/><rect x='75' y='112' width='34' height='32' fill='%23C5A059' fill-opacity='0.45'/><rect x='130' y='112' width='34' height='32' fill='%23C5A059' fill-opacity='0.85'/><rect x='75' y='162' width='34' height='32' fill='%23C5A059' fill-opacity='0.85'/><rect x='130' y='162' width='34' height='32' fill='%23C5A059' fill-opacity='0.85'/><rect x='240' y='98' width='42' height='36' fill='%23F5F2EB' fill-opacity='0.85'/><rect x='302' y='98' width='42' height='36' fill='%23F5F2EB' fill-opacity='0.45'/><rect x='240' y='154' width='42' height='36' fill='%23F5F2EB' fill-opacity='0.85'/><rect x='302' y='154' width='42' height='36' fill='%23F5F2EB' fill-opacity='0.85'/><line x1='25' y1='250' x2='395' y2='250' stroke='%23C5A059' stroke-width='2'/></svg>" alt="Perspectiva arquitetônica noturna das torres do Palazzo Horizonte Noroeste com iluminação dourada">
+            </div>
+            <div class="carousel__body">
+              <span class="stage-badge stage-badge--planta">Lançamento • Na Planta</span>
+              <h3 class="carousel__title">Palazzo Horizonte Noroeste</h3>
+              <p class="carousel__location">SQNW 109 • Setor Noroeste, Brasília - DF</p>
+              <p>Apartamentos vazados de alto padrão com elevador privativo, varanda gourmet integrada, infraestrutura para veículos elétricos e cobertura coletiva com piscina aquecida.</p>
+              <div class="carousel__specs">
+                <span>📐 138 a 276 m²</span>
+                <span>🛏️ 3 e 4 Suítes</span>
+                <span>🚗 2 a 4 Vagas</span>
+              </div>
+              <div>
+                <button type="button" class="btn-cta btn-card" data-imovel="Palazzo Horizonte Noroeste (Na Planta)">Solicitar Book e Plantas</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="carousel__slide" data-slide="1">
+            <div class="carousel__visual carousel__visual--2">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 280' fill='none'><rect width='420' height='280' fill='%23064E3B'/><rect x='85' y='32' width='250' height='218' rx='4' stroke='%23C5A059' stroke-width='2.5' fill='%230F172A'/><rect x='115' y='58' width='190' height='22' fill='%23C5A059'/><rect x='115' y='100' width='82' height='46' fill='%23F5F2EB' fill-opacity='0.88'/><rect x='223' y='100' width='82' height='46' fill='%23F5F2EB' fill-opacity='0.88'/><rect x='115' y='164' width='82' height='46' fill='%23C5A059' fill-opacity='0.65'/><rect x='223' y='164' width='82' height='46' fill='%23C5A059' fill-opacity='0.65'/><line x1='35' y1='250' x2='385' y2='250' stroke='%23C5A059' stroke-width='2'/></svg>" alt="Fachada contemporânea em travertino e vidro do residencial Jardins do Parque Sudoeste">
+            </div>
+            <div class="carousel__body">
+              <span class="stage-badge stage-badge--obras">Em Obras • 68% Concluído</span>
+              <h3 class="carousel__title">Jardins do Parque Sudoeste</h3>
+              <p class="carousel__location">QMSW 05 • Setor Sudoeste, Brasília - DF</p>
+              <p>Localização privilegiada ao lado do Parque da Cidade, com fachada aerada em porcelanato travertino, automação residencial e lazer completo no pilotis.</p>
+              <div class="carousel__specs">
+                <span>📐 84 a 112 m²</span>
+                <span>🛏️ 2 e 3 Suítes</span>
+                <span>🚗 2 Vagas Soltas</span>
+              </div>
+              <div>
+                <button type="button" class="btn-cta btn-card" data-imovel="Jardins do Parque Sudoeste (Em Obras)">Agendar Visita ao Decorado</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="carousel__slide" data-slide="2">
+            <div class="carousel__visual carousel__visual--3">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 280' fill='none'><rect width='420' height='280' fill='%23070B14'/><rect x='45' y='75' width='155' height='175' rx='4' stroke='%23C5A059' stroke-width='2.5' fill='%23064E3B'/><rect x='220' y='40' width='155' height='210' rx='4' stroke='%23C5A059' stroke-width='2.5' fill='%230F172A'/><rect x='70' y='100' width='105' height='20' fill='%23C5A059'/><rect x='70' y='138' width='105' height='20' fill='%23F5F2EB' fill-opacity='0.85'/><rect x='70' y='176' width='105' height='20' fill='%23F5F2EB' fill-opacity='0.55'/><rect x='245' y='68' width='105' height='24' fill='%23C5A059'/><rect x='245' y='110' width='105' height='24' fill='%23F5F2EB' fill-opacity='0.85'/><rect x='245' y='152' width='105' height='24' fill='%23F5F2EB' fill-opacity='0.55'/><line x1='25' y1='250' x2='395' y2='250' stroke='%23C5A059' stroke-width='2'/></svg>" alt="Edifício Atelier Residence Asa Norte com lofts de pé-direito duplo pronto para morar">
+            </div>
+            <div class="carousel__body">
+              <span class="stage-badge stage-badge--pronto">Pronto para Morar</span>
+              <h3 class="carousel__title">Atelier Residence Asa Norte</h3>
+              <p class="carousel__location">CLN 210 • Asa Norte, Brasília - DF</p>
+              <p>Studios executivos e lofts duplex com pé-direito duplo, conciergerie, sala de reuniões privativa e alta liquidez para patrimônio e locação.</p>
+              <div class="carousel__specs">
+                <span>📐 36 a 68 m²</span>
+                <span>🛏️ Studio / Loft</span>
+                <span>🚗 1 Vaga + Valet</span>
+              </div>
+              <div>
+                <button type="button" class="btn-cta btn-card" data-imovel="Atelier Residence Asa Norte (Pronto)">Simular Proposta</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="carousel__controls">
+            <div class="carousel__dots" role="tablist" aria-label="Selecionar empreendimento">
+              <button type="button" class="carousel__dot is-active" data-goto="0" aria-label="Empreendimento 1: Palazzo Horizonte"></button>
+              <button type="button" class="carousel__dot" data-goto="1" aria-label="Empreendimento 2: Jardins do Parque"></button>
+              <button type="button" class="carousel__dot" data-goto="2" aria-label="Empreendimento 3: Atelier Residence"></button>
+              <span id="carousel-counter" class="carousel__counter" aria-live="polite">1 / 3</span>
+            </div>
+            <div class="carousel__arrows">
+              <button type="button" id="carousel-prev" class="btn-carousel" aria-label="Empreendimento anterior">← Anterior</button>
+              <button type="button" id="carousel-next" class="btn-carousel" aria-label="Próximo empreendimento">Próximo →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vitrine de Cartões de Imóveis -->
+    <section id="vitrine" class="section" aria-labelledby="titulo-vitrine">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-header__tag">Acervo Exclusivo</span>
+            <h2 id="titulo-vitrine" class="section-header__title">Imóveis Selecionados em Brasília</h2>
+          </div>
+          <p class="section-header__desc">Portfólio auditado com matrícula verificada, valores transparentes e atendimento reservado com especialistas do Distrito Federal.</p>
+        </div>
+
+        <div class="vitrine-toolbar">
+          <span id="vitrine-count" class="a11y-bar__label" style="color: var(--text-main);">Exibindo 6 de 6 imóveis selecionados</span>
+          <div class="vitrine-toolbar__actions">
+            <button type="button" id="btn-filter-favs" class="btn-outline" aria-pressed="false">♡ Meus Favoritos (<span id="fav-count">0</span>)</button>
+            <button type="button" id="btn-reset-filters" class="btn-outline">Limpar Filtros</button>
+          </div>
+        </div>
+
+        <div id="properties-grid" class="properties-grid">
+          <!-- Card 1 -->
+          <article class="property-card" data-id="imovel-1" data-mode="comprar" data-type="apartamento" data-tier="faixa-1" data-location="asa norte sqn 308">
+            <div class="property-card__media">
+              <span class="property-card__tag">Venda • Exclusivo</span>
+              <button type="button" class="btn-fav" aria-label="Favoritar Apartamento SQN 308" aria-pressed="false">♡</button>
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' fill='none'><rect width='360' height='200' fill='%230F172A'/><rect x='45' y='28' width='270' height='144' rx='4' stroke='%23C5A059' stroke-width='2' fill='%23070B14'/><rect x='75' y='52' width='56' height='36' fill='%23C5A059'/><rect x='152' y='52' width='56' height='36' fill='%23F5F2EB' fill-opacity='0.85'/><rect x='229' y='52' width='56' height='36' fill='%23C5A059'/><rect x='75' y='108' width='210' height='24' fill='%23064E3B'/></svg>" alt="Fachada modernista de bloco residencial na SQN 308 Asa Norte">
+            </div>
+            <div class="property-card__body">
+              <span class="property-card__neighborhood">Asa Norte • SQN 308</span>
+              <h3 class="property-card__title">Apartamento Reformado Vazado</h3>
+              <p class="property-card__address">Superquadra arborizada com projeto luminotécnico e marcenaria sob medida.</p>
+              <div class="property-card__features">
+                <span>📐 105 m²</span>
+                <span>🛏️ 3 Quartos (1 Suíte)</span>
+                <span>🚗 1 Vaga</span>
+              </div>
+              <div class="property-card__footer">
+                <div class="property-card__price">
+                  <strong>R$ 1.180.000</strong>
+                  <span>Cond. R$ 890/mês</span>
+                </div>
+                <button type="button" class="btn-card" data-imovel="Apartamento SQN 308 (R$ 1.180.000)">Solicitar Dossiê</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="property-card" data-id="imovel-2" data-mode="alugar" data-type="studio" data-tier="faixa-1" data-location="aguas claras castanheiras">
+            <div class="property-card__media">
+              <span class="property-card__tag">Locação • Mobiliado</span>
+              <button type="button" class="btn-fav" aria-label="Favoritar Studio Águas Claras" aria-pressed="false">♡</button>
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' fill='none'><rect width='360' height='200' fill='%231E293B'/><rect x='100' y='20' width='160' height='160' rx='4' stroke='%23C5A059' stroke-width='2' fill='%23070B14'/><rect x='128' y='44' width='42' height='32' fill='%23C5A059'/><rect x='190' y='44' width='42' height='32' fill='%23C5A059'/><rect x='128' y='96' width='104' height='52' fill='%23064E3B'/></svg>" alt="Torre executiva contemporânea em Águas Claras próxima ao metrô">
+            </div>
+            <div class="property-card__body">
+              <span class="property-card__neighborhood">Águas Claras • Av. Castanheiras</span>
+              <h3 class="property-card__title">Studio Executivo ao Lado do Metrô</h3>
+              <p class="property-card__address">Totalmente mobiliado, automação de iluminação e academia panorâmica.</p>
+              <div class="property-card__features">
+                <span>📐 38 m²</span>
+                <span>🛏️ 1 Suíte</span>
+                <span>🚗 1 Vaga Coberta</span>
+              </div>
+              <div class="property-card__footer">
+                <div class="property-card__price">
+                  <strong>R$ 2.650/mês</strong>
+                  <span>Cond. R$ 420/mês</span>
+                </div>
+                <button type="button" class="btn-card" data-imovel="Studio Águas Claras (R$ 2.650/mês)">Agendar Visita</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="property-card" data-id="imovel-3" data-mode="lancamentos" data-type="cobertura" data-tier="faixa-3" data-location="noroeste sqnw 109">
+            <div class="property-card__media">
+              <span class="property-card__tag">Lançamento • Signature</span>
+              <button type="button" class="btn-fav" aria-label="Favoritar Cobertura Palazzo Noroeste" aria-pressed="false">♡</button>
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' fill='none'><rect width='360' height='200' fill='%23070B14'/><rect x='40' y='42' width='280' height='136' rx='4' stroke='%23C5A059' stroke-width='2' fill='%230F172A'/><rect x='65' y='24' width='230' height='22' fill='%23C5A059'/><rect x='75' y='72' width='90' height='46' fill='%23F5F2EB' fill-opacity='0.85'/><rect x='195' y='72' width='90' height='46' fill='%23F5F2EB' fill-opacity='0.85'/></svg>" alt="Cobertura linear de alto padrão no Setor Noroeste com terraço panorâmico">
+            </div>
+            <div class="property-card__body">
+              <span class="property-card__neighborhood">Setor Noroeste • SQNW 109</span>
+              <h3 class="property-card__title">Cobertura Linear Palazzo Horizonte</h3>
+              <p class="property-card__address">Terraço privativo com piscina aquecida, espaço gourmet e vista livre definitiva.</p>
+              <div class="property-card__features">
+                <span>📐 245 m²</span>
+                <span>🛏️ 4 Suítes</span>
+                <span>🚗 4 Vagas</span>
+              </div>
+              <div class="property-card__footer">
+                <div class="property-card__price">
+                  <strong>R$ 2.890.000</strong>
+                  <span>Direto com a JoãoFialho</span>
+                </div>
+                <button type="button" class="btn-card" data-imovel="Cobertura Palazzo Noroeste (R$ 2.890.000)">Receber Planta</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="property-card" data-id="imovel-4" data-mode="comprar" data-type="casa" data-tier="faixa-2" data-location="jardim botanico solar">
+            <div class="property-card__media">
+              <span class="property-card__tag">Venda • Condomínio Fechado</span>
+              <button type="button" class="btn-fav" aria-label="Favoritar Residência Jardim Botânico" aria-pressed="false">♡</button>
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' fill='none'><rect width='360' height='200' fill='%230F172A'/><polygon points='180,26 55,92 305,92' fill='%23C5A059'/><rect x='80' y='92' width='200' height='84' rx='2' stroke='%23C5A059' stroke-width='2' fill='%23070B14'/><rect x='155' y='118' width='50' height='58' fill='%23064E3B'/></svg>" alt="Residência contemporânea térrea em condomínio fechado no Jardim Botânico">
+            </div>
+            <div class="property-card__body">
+              <span class="property-card__neighborhood">Jardim Botânico • Cond. Solar</span>
+              <h3 class="property-card__title">Residência Contemporânea Térrea</h3>
+              <p class="property-card__address">Lote de 800 m², usina fotovoltaica instalada e área gourmet integrada ao jardim.</p>
+              <div class="property-card__features">
+                <span>📐 310 m²</span>
+                <span>🛏️ 4 Suítes</span>
+                <span>🚗 4 Vagas</span>
+              </div>
+              <div class="property-card__footer">
+                <div class="property-card__price">
+                  <strong>R$ 2.150.000</strong>
+                  <span>Cond. R$ 680/mês</span>
+                </div>
+                <button type="button" class="btn-card" data-imovel="Residência Jardim Botânico (R$ 2.150.000)">Solicitar Dossiê</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="property-card" data-id="imovel-5" data-mode="alugar" data-type="apartamento" data-tier="faixa-2" data-location="sudoeste sqsw 104">
+            <div class="property-card__media">
+              <span class="property-card__tag">Locação • Alto Padrão</span>
+              <button type="button" class="btn-fav" aria-label="Favoritar Apartamento Sudoeste" aria-pressed="false">♡</button>
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' fill='none'><rect width='360' height='200' fill='%231E293B'/><rect x='60' y='30' width='240' height='142' rx='4' stroke='%23C5A059' stroke-width='2' fill='%23070B14'/><rect x='92' y='56' width='74' height='42' fill='%23C5A059'/><rect x='194' y='56' width='74' height='42' fill='%23C5A059'/><rect x='92' y='116' width='176' height='30' fill='%23064E3B'/></svg>" alt="Edifício residencial nascente na SQSW 104 Setor Sudoeste">
+            </div>
+            <div class="property-card__body">
+              <span class="property-card__neighborhood">Sudoeste • SQSW 104</span>
+              <h3 class="property-card__title">Apartamento 2 Quartos Nascente</h3>
+              <p class="property-card__address">Garagem no subsolo, portaria blindada 24h e a poucos passos do comércio local.</p>
+              <div class="property-card__features">
+                <span>📐 74 m²</span>
+                <span>🛏️ 2 Quartos (1 Suíte)</span>
+                <span>🚗 1 Vaga</span>
+              </div>
+              <div class="property-card__footer">
+                <div class="property-card__price">
+                  <strong>R$ 4.100/mês</strong>
+                  <span>Cond. R$ 710/mês</span>
+                </div>
+                <button type="button" class="btn-card" data-imovel="Apartamento Sudoeste (R$ 4.100/mês)">Agendar Visita</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="property-card" data-id="imovel-6" data-mode="lancamentos" data-type="apartamento" data-tier="faixa-1" data-location="park sul prime">
+            <div class="property-card__media">
+              <span class="property-card__tag">Lançamento • Breve Entrega</span>
+              <button type="button" class="btn-fav" aria-label="Favoritar Prime Residence Park Sul" aria-pressed="false">♡</button>
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' fill='none'><rect width='360' height='200' fill='%23070B14'/><rect x='70' y='28' width='95' height='148' rx='4' stroke='%23C5A059' stroke-width='2' fill='%23064E3B'/><rect x='195' y='48' width='95' height='128' rx='4' stroke='%23C5A059' stroke-width='2' fill='%230F172A'/><rect x='96' y='56' width='42' height='28' fill='%23C5A059'/><rect x='221' y='76' width='42' height='28' fill='%23F5F2EB'/></svg>" alt="Condomínio clube Prime Residence no Park Sul">
+            </div>
+            <div class="property-card__body">
+              <span class="property-card__neighborhood">Park Sul • Prime Residence</span>
+              <h3 class="property-card__title">3 Suítes com Varanda Gourmet</h3>
+              <p class="property-card__address">Condomínio clube completo ao lado do ParkShopping e estação do metrô.</p>
+              <div class="property-card__features">
+                <span>📐 118 m²</span>
+                <span>🛏️ 3 Suítes</span>
+                <span>🚗 2 Vagas</span>
+              </div>
+              <div class="property-card__footer">
+                <div class="property-card__price">
+                  <strong>R$ 1.490.000</strong>
+                  <span>Fluxo direto facilitado</span>
+                </div>
+                <button type="button" class="btn-card" data-imovel="Prime Residence Park Sul (R$ 1.490.000)">Simular Parcelas</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="vitrine-empty" class="empty-state" hidden>
+          <p style="margin-bottom: 14px; font-weight: 600;">Nenhum imóvel corresponde exatamente aos filtros selecionados.</p>
+          <button type="button" id="btn-empty-reset" class="btn-cta">Exibir Todos os Imóveis</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cartões Explicativos (Pilares Institucionais) -->
+    <section id="diferenciais" class="section section--alt" aria-labelledby="titulo-diferenciais">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-header__tag">Padrão JoãoFialho</span>
+            <h2 id="titulo-diferenciais" class="section-header__title">Solidez Patrimonial & Excelência</h2>
+          </div>
+          <p class="section-header__desc">Unimos o rigor construtivo de uma incorporadora de alto padrão à agilidade de uma plataforma digital transparente.</p>
         </div>
 
         <div class="info-grid">
           <article class="info-card">
-            <div class="info-card__icon" aria-hidden="true">01</div>
-            <h3>Carrossel de Empreendimentos</h3>
-            <p>Vitrine interativa de lançamentos assinados com indicadores de estágio de obra (Na Planta, Em Obras e Pronto).</p>
+            <div class="info-card__icon" aria-hidden="true">I.</div>
+            <h3>Financiamento Direto ou Bancário</h3>
+            <p>Operações estruturadas com os principais bancos (BRB, Caixa, Itaú) ou planos personalizados diretamente com a incorporadora durante a obra.</p>
           </article>
 
           <article class="info-card">
-            <div class="info-card__icon" aria-hidden="true">02</div>
-            <h3>Grade de Cartões de Imóveis</h3>
-            <p>Catálogo filtrável com fichas técnicas detalhadas (metragem, suítes, vagas, condomínio) e sistema de favoritos.</p>
+            <div class="info-card__icon" aria-hidden="true">II.</div>
+            <h3>Rigor no Cronograma de Entrega</h3>
+            <p>Acompanhamento físico-financeiro auditado e relatórios fotográficos mensais disponíveis diretamente no Portal do Cliente.</p>
           </article>
 
           <article class="info-card">
-            <div class="info-card__icon" aria-hidden="true">03</div>
-            <h3>Pilares Institucionais & Contato</h3>
-            <p>Cartões explicativos de diferenciais patrimoniais e formulário consultivo do Private Desk com validação.</p>
+            <div class="info-card__icon" aria-hidden="true">III.</div>
+            <h3>Due Diligence Jurídica Completa</h3>
+            <p>Análise documental integral de cada unidade antes da captação, assegurando tranquilidade patrimonial na escritura ou locação.</p>
           </article>
 
           <article class="info-card">
-            <div class="info-card__icon" aria-hidden="true">04</div>
-            <h3>Rodapé Completo & Portal Login</h3>
-            <p>Rodapé institucional com informações legais (CRECI-DF) e página dedicada de autenticação do cliente.</p>
+            <div class="info-card__icon" aria-hidden="true">IV.</div>
+            <h3>Eixos Nobres de Valorização</h3>
+            <p>Atuação concentrada nos setores mais consolidados de Brasília, próximos a parques, eixos monumentais e centros executivos.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato com Formulário (Private Desk) -->
+    <section id="contato" class="section" aria-labelledby="titulo-contato">
+      <div class="container contact-layout">
+        <div class="contact-panel">
+          <h2 id="titulo-contato">Private Desk JoãoFialho</h2>
+          <p>Receba o book completo dos lançamentos, simulação de fluxo financeiro ou agende uma visita reservada com nossos diretores comerciais.</p>
+          <ul class="contact-list">
+            <li>📍 <strong>Sede Corporativa:</strong> SCN Quadra 02, Bloco A — Asa Norte, Brasília - DF</li>
+            <li>📞 <strong>Atendimento Exclusivo:</strong> (61) 3321-9000</li>
+            <li>💬 <strong>Horário:</strong> Segunda a Sábado, das 8h às 20h</li>
+            <li>🏛️ <strong>Registro:</strong> CRECI-DF 28.490-J</li>
+          </ul>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form" class="contact-form-grid">
+            <div class="form-group">
+              <label for="contato-nome">Nome Completo *</label>
+              <input type="text" id="contato-nome" placeholder="Seu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contato-telefone">WhatsApp / Telefone *</label>
+              <input type="tel" id="contato-telefone" placeholder="(61) 99999-0000" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contato-email">E-mail Corporativo ou Pessoal *</label>
+              <input type="email" id="contato-email" placeholder="voce@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contato-interesse">Finalidade</label>
+              <select id="contato-interesse">
+                <option value="Lançamentos na Planta">Lançamentos na Planta</option>
+                <option value="Aquisição de Imóvel Pronto">Aquisição de Imóvel Pronto</option>
+                <option value="Locação Residencial / Executiva">Locação Residencial / Executiva</option>
+                <option value="Avaliação e Captação de Imóvel">Avaliação e Captação de Imóvel</option>
+              </select>
+            </div>
+
+            <div class="form-group full-span">
+              <label for="contato-mensagem">Preferências ou Imóvel de Interesse</label>
+              <textarea id="contato-mensagem" rows="3" placeholder="Informe a superquadra desejada, metragem ou empreendimento..."></textarea>
+            </div>
+
+            <div class="checkbox-row full-span">
+              <input type="checkbox" id="contato-lgpd" required>
+              <label for="contato-lgpd">Concordo com o tratamento dos meus dados exclusivamente para atendimento imobiliário pela JoãoFialho (LGPD — Lei nº 13.709/2018).</label>
+            </div>
+
+            <div class="full-span">
+              <button type="submit" class="btn-cta">Solicitar Atendimento Reservado</button>
+              <p id="contact-feedback" class="search-feedback" aria-live="polite"></p>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Rodapé Institucional -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <span>© 2026 JoãoFialho Incorporações & Imóveis — Etapa 1 (Arquitetura Inicial e Identidade Visual)</span>
-        <span>Desenvolvido por João Pedro Fialho Campos (RA: 22605006) — UniCEUB</span>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>JoãoFialho Incorporações</h3>
+          <p>Incorporadora e imobiliária digital de alto padrão em Brasília. Solidez patrimonial, arquitetura autoral e acessibilidade em cada detalhe.</p>
+          <p><strong>CRECI-DF:</strong> 28.490-J</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Navegação</h3>
+          <ul>
+            <li><a href="#busca">Explorar Acervo</a></li>
+            <li><a href="#lancamentos">Empreendimentos Assinados</a></li>
+            <li><a href="#vitrine">Destaques no DF</a></li>
+            <li><a href="login.html">Portal do Cliente</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Regiões Nobres</h3>
+          <ul>
+            <li><a href="#vitrine">Setor Noroeste</a></li>
+            <li><a href="#vitrine">Setor Sudoeste</a></li>
+            <li><a href="#vitrine">Asa Norte & Asa Sul</a></li>
+            <li><a href="#vitrine">Jardim Botânico & Park Sul</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li>SCN Quadra 02, Bloco A — Brasília/DF</li>
+            <li>Tel.: (61) 3321-9000</li>
+            <li>contato@joaofialho.com.br</li>
+            <li>Seg. a Sáb. • 08h às 20h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 JoãoFialho Incorporações & Imóveis — Projeto Final de Desenvolvimento de Interfaces (UniCEUB)</span>
+        <span>Desenvolvido por João Pedro Fialho Campos (RA: 22605006)</span>
       </div>
     </div>
   </footer>
